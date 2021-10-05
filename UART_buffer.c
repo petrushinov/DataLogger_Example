@@ -15,7 +15,6 @@
 #include "global_macros.h"
 #include <libpic30.h> 
 
-
 char inputWIFIBuff [INPUT_WIFI_BUFF_SIZE];
 char inputServiceBuff [INPUT_SERVICE_BUFF_SIZE];
 uint16_t topWIFIQueue = 0;
@@ -28,8 +27,6 @@ uint8_t overflowedWIFIBuff = false;
 uint8_t overflowedServiceBuff = false;
 char buffOut [OUTPUT_UART_BUFF_SIZE];
 char quote[2] = {34, 0}; // ascii = (")
-
-
 
 void UART1_Write(uint8_t byte);
 

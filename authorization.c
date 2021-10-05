@@ -7,7 +7,6 @@
  * version 1.0
  */
 
-
 #define    FCY    10000000UL
 
 #include <libpic30.h>
@@ -50,7 +49,6 @@ void fill_in_authorization(void) {
     UART_char_write("ENTER SERVER PORT\r\n", SERVICE_UART_PORT);
     _fill_authorization_buff("PORT&");
 }
-
 
 void _fill_authorization_buff(char * add) {
     char enter[] = {13, 0}; // "carriage return" ascii

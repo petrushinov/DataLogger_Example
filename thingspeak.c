@@ -7,7 +7,6 @@
  * version 1.0
  */
 
-
 #define    FCY    10000000UL
 
 #include "UART.h"
@@ -23,7 +22,6 @@
 
 int error = 0;
 
-
 uint8_t send_data_to_server(void) {
     error = _WIFI_connect_to_thingspeak(ONE_SECOND);
     if (error != NO_ERROR) {
@@ -32,7 +30,6 @@ uint8_t send_data_to_server(void) {
     return error = _WIFI_send_data_to_thingspeak(TWO_SECONDS);
 }
 
-  
 #ifdef SECRETS_IN_CODE
 uint8_t _WIFI_connect_to_thingspeak(uint16_t delay_milliseconds) {
 
@@ -140,9 +137,6 @@ uint8_t _WIFI_send_data_to_thingspeak(uint16_t delay_milliseconds) {
 
     char dataLength [20];
     uint16_t length;
-
-   // sensor1 = 254;
-    //sensor2 = 70;
 
     fill_authorization_temp("APY-KEY&");
     

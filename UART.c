@@ -11,11 +11,8 @@
 #include <xc.h>
 #include <libpic30.h> 
 
-
-
 uint8_t inputBufferUpdated = 0;
 char inputBufer [INPUT_BUFFER_SIZE];
-
 
 void UART_char_write(char *txData, uint8_t uartPort) {
 
