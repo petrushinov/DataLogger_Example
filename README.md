@@ -7,7 +7,7 @@ I'm not a professional programmer. I have over 10 years of experience in the fie
 This is the reason why my professional path turned to programming.
 
 The project:
-This is an example project of a datalogger based on the sends data to a server via wireless to the internet. 
+This is an example project of a datalogger based on the sends data to a server via wireless network. 
 My plan is that project will develop in the future with more modules.
 
 Hardware:
