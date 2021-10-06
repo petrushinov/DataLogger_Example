@@ -33,19 +33,15 @@ int main(void) {
 
 #ifdef SECRETS_IN_CODE
     start_WIFI_connection();
-    send_data_to_server();
+    //send_data_to_server();
 #endif
 
-    
-    
-    
     while (1) {
-
         
-        __delay_ms(20000);
+        send_data_to_server();
 
+        __delay_ms(10000);
     }
-
     return 1;
 }
 

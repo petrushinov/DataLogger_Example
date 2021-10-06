@@ -115,5 +115,4 @@ uint8_t _connect_to_AP(uint16_t delay_milliseconds) {
     WIFI_clear_input_buff();
     return NO_ERROR;
 }
-
 #endif

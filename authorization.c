@@ -20,7 +20,6 @@
 #include "UART_buffer.h"
 #include "secret.h"
 
-
 #ifdef SECRETS_IN_FLASH
 char authorizationBuff [AUTORIZATION_BUFF_SIZE];
 char authorizationTemp [100];

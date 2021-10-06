@@ -10,11 +10,7 @@
 #ifndef MEASUREMENT_H
 #define	MEASUREMENT_H
 
-
-
 #define SENSOR1 10
-
-
 
 int16_t ADC1_get_value(uint8_t channel);
 

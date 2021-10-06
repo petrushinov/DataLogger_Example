@@ -14,10 +14,10 @@
 
 #ifdef SECRETS_IN_CODE
 
-#define SSID "......."  // ssid WIFI name
-#define WIFI_PASS "......" //WIFI password
+#define SSID ".........."  // ssid WIFI name
+#define WIFI_PASS "..........." //WIFI password
 #define SERVER_ADDRESS "184.106.153.149" // server IP or link
-#define WRITE_API_KEY "GET /update?api_key=..........&field1=" //Write API Key: Use this key to write data to a channel. 
+#define WRITE_API_KEY "GET /update?api_key=...........&field1=" //Write API Key: Use this key to write data to a channel. 
 #define Read_CH_STATUS "GET channels/........../status.json?api_key=............" //Read Chanel Status Updates
 #define SERVER_PORT "80"
 
@@ -34,6 +34,5 @@
 #define AUTORIZATION_BUFF_SIZE (SSID_SIZE + WIFI_PASS_SIZE + SERVER_ADDRESS_SIZE + WRITE_API_KEY_SIZE + READ_CH_STATUS_SIZE + SERVER_PORT_SIZE)
 
 #endif
-
 #endif	/* SECRET_H */
 

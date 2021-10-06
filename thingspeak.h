@@ -31,7 +31,6 @@ uint8_t _WIFI_connect_to_thingspeak(uint16_t delay_milliseconds);
  * return number of error or zero if no error
  */
 
-
 uint8_t _WIFI_send_data_to_thingspeak(uint16_t delay_milliseconds);
 /*
  * @Description 
@@ -51,7 +50,6 @@ uint8_t _WIFI_send_data_to_thingspeak(uint16_t delay_milliseconds);
  * return number of error or zero if no error
  */
 
-
 uint8_t send_data_to_server(void);
 /*
  * @Description 
@@ -67,7 +65,5 @@ uint8_t send_data_to_server(void);
  * This function retransmit returned value from "_WIFI_connect_to_thingspeak()" 
  * and "_WIFI_send_data_to_thingspeak()" functions  
  */
-
-
 #endif	/* THINGSPEAK_H */
 

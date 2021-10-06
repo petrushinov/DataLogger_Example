@@ -10,7 +10,6 @@
 #ifndef UART_H
 #define	UART_H
 
-
 #include <stdint.h>
 
 #define INPUT_BUFFER_SIZE 100
@@ -31,8 +30,5 @@ void UART_char_write(char *txData , uint8_t uartPort);
  * @Returns 
  * N/A
  */
-
-
-
 #endif	/* UART_H */
 

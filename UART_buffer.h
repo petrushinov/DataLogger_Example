@@ -23,7 +23,6 @@ extern char inputWIFIBuff [];
 extern char buffOut [];
 extern char quote[2]; // ascii = (")
 
-
 void WIFI_input_buff(void);
 /*
  * @Description 
@@ -74,6 +73,7 @@ char *find_word_WIFI_input_buff(char *string);
  * @Returns 
  * Pointer after the end keyword.
  */
+
 void WIFI_clear_input_buff(void);
 /*
  * @Description 
@@ -124,6 +124,4 @@ void SERVICE_PORT_clear_input_buff(void);
  * @Returns 
  * N/A
  */
-
-
 #endif	/* UARTBUFFER_H */

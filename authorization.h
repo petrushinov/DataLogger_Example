@@ -19,7 +19,6 @@
 extern char authorizationBuff [];
 extern char authorizationTemp [];
 
-
 void FLASH_write_user_authorization (void);
 /*
  * @Description 
@@ -108,9 +107,7 @@ void fill_authorization_temp (char *keyWord);
  * N/A
  */
 
-
 #endif
-
 #endif	
 
 
