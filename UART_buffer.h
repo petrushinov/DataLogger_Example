@@ -26,10 +26,10 @@ extern char quote[2]; // ascii = (")
 void WIFI_input_buff(void);
 /*
  * @Description 
- * This function write every received byte in "inputWIFIBuff" and copy  
+ * This function writes every received byte in "inputWIFIBuff" and copy  
  * received byte in UART1 (service port) output register. if the buffer is full,
  * the function will start writing to the buffer from the beginning without 
- * deleting all elements in it. This is a queue that after overflow does not 
+ * deletes all elements in it. This is a queue that after overflow does not 
  * stop but continues to record as long as there is incoming data.
  * 
   @Param
@@ -41,7 +41,7 @@ void WIFI_input_buff(void);
 void WIFI_read_input_buff(void);
 /*
  * @Description 
- * This function read "inputWIFIBuff[]" and print data to UART1 (service port). 
+ * This function reads "inputWIFIBuff[]" and prints data to UART1 (service port). 
  * After reading every element is deleted. This function is directly related to 
  * "WIFI_input_buff()". The function prints the entire queue "inputWIFIBuff[]".
  * 
@@ -65,7 +65,7 @@ void clear_buff_out(void);
 char *find_word_WIFI_input_buff(char *string);
 /*
  * @Description 
- * The function finding the keyword in the queue "inputWIFIBuff[]" and return 
+ * The function finds the keyword in the queue "inputWIFIBuff[]" and returns
  * a pointer after the end keyword.
  * 
   @Param
@@ -88,10 +88,10 @@ void WIFI_clear_input_buff(void);
 void SERVICE_PORT_input_buff(void);
 /*
  * @Description 
- * This function write every received byte via UART1 (service port) in 
- * "inputServiceBuff[]". if the buffer is full, the function will start writing 
- * to the buffer from the beginning without deleting all elements in it. 
- * This is a queue that after overflow does not stop but continues to record as 
+ * This function writes every received byte via UART1 (service port) in 
+ * "inputServiceBuff[]". if the buffer is full, the function will start writes 
+ * to the buffer from the beginning without deletes all elements in it. 
+ * This is a queue that after overflow does not stop but continues to records as 
  * long as there is incoming data.
  * 
   @Param
@@ -103,9 +103,9 @@ void SERVICE_PORT_input_buff(void);
 void SERVICE_PORT_read_input_buff(void);
 /*
  * @Description 
- * This function read "inputServiceBuff[]" and print data to UART2. 
+ * This function reads "inputServiceBuff[]" and print data to UART2. 
  * After reading every element is deleted. This function is directly related to 
- * "SERVICE_PORT_input_buff()". The function prints the entire queue
+ * "SERVICE_PORT_input_buff()". The function print the entire queue
  * "inputServiceBuff[]".
  * 
   @Param

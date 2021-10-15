@@ -39,7 +39,7 @@ void FLASH_write_user_authorization (void);
 void FLASH_read_user_authorization (void);
 /*
  * @Description 
- * This function after call read FLASH address which has a 24bit record 
+ * This function after call reads FLASH address which has a 24bit record 
  * or 3 bytes. Every byte is a character and every character is copied in the 
  * next element of "authorizationBuff"
  *  NOTE: in this example I chose PIC24FJ256GA106. In this MCU each FLASH memory 
@@ -55,7 +55,7 @@ void FLASH_read_user_authorization (void);
 void _fill_authorization_buff (char * add);
 /*
  * @Description 
- *  This function expect enter button will be press, after then function added 
+ *  This function expects enter button will be press, after then function added 
  * a marker/key word to the "authorizationBuff", after then the input word from the 
  * terminal is writing to the "authorizationBuff". 
  * 
@@ -96,7 +96,7 @@ char *find_word (char *keyWord, char *string);
 void fill_authorization_temp (char *keyWord);
 /*
  * @Description 
- * Function finding a keyword in "authorizationBuff" and write pointer to the the next 
+ * The function finds a keyword in "authorizationBuff" and write pointer to the the next 
  * elements in  "authorizationTemp" while 
  * element in "authorizationBuff" is different from "carriage return"
  * 

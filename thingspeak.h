@@ -15,12 +15,12 @@ extern int error;
 uint8_t _WIFI_connect_to_thingspeak(uint16_t delay_milliseconds);
 /*
  * @Description 
- * This function making the connection between wroom-02 (WIFI module)
+ * This function makes the connection between wroom-02 (WIFI module)
  * and thingspeak.com server. If the connection has no error, the server will 
- * respond "OK" and it is will be write in "WIFI input buffer". If function 
- * find "OK" in the "WIFI input buffer", the function return "zero". If "OK" 
- * missing in "WIFI input buffer", the function will start a new attempt to 
- * connect to the server. In this moment into UART1 (service port) will 
+ * respond "OK" and it is will be written in "WIFI input buffer". If the 
+ * function finds "OK" in the "WIFI input buffer", the function return "zero".
+ * If "OK" missing in "WIFI input buffer", the function will start a new attempt 
+ * to connect to the server. In this moment into UART1 (service port) will 
  * write "THINGSPEAK SERVER FAILURE". 
  * 
  * @Param
@@ -34,11 +34,11 @@ uint8_t _WIFI_connect_to_thingspeak(uint16_t delay_milliseconds);
 uint8_t _WIFI_send_data_to_thingspeak(uint16_t delay_milliseconds);
 /*
  * @Description 
- * This function making configuration of wroom-02 (WIFI module) for sending 
- * data. After then function send to thingspeak.com  APi-KEY  and value of 
+ * This function makes configuration of wroom-02 (WIFI module) for sending 
+ * data. After then function sends to thingspeak.com  APi-KEY  and value of 
  * sensorX variable. If the sent package is delivered, the server will respond 
  * "CLOSED". The server answer will be written in "WIFI input buffer". 
- * If "CLOSED" missing in "WIFI input buffer", the function will make a new 
+ * If "CLOSED" missing in "WIFI input buffer", the function will start a new 
  * attempt to send data to the server. Into UART1 (service port) will write 
  * "SERVER DID NOT RECEIVE THE PACKAGE". 
  * 

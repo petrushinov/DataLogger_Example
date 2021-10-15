@@ -13,10 +13,10 @@
 uint8_t _connect_to_AP(uint16_t delay_milliseconds);
 /*
  * @Description 
- * This function making the connection between wroom-02 (WIFI module)
+ * This function makes the connection between wroom-02 (WIFI module)
  * and Access Point. If the connection has no error, the wroom-02 will 
- * respond "OK" and it is will be write in "WIFI input buffer". If function 
- * find "OK" in the "WIFI input buffer", the function return "zero". If "OK" 
+ * respond "OK" and it is will be write in "WIFI input buffer". If the function 
+ * finds "OK" in the "WIFI input buffer", the function return "zero". If "OK" 
  * missing in "WIFI input buffer", the function will start a new attempt to 
  * connect to the Access Point. In this moment into UART1 (service port) will 
  * write "WIFI CONNECTION ERROR". 
@@ -33,8 +33,8 @@ uint8_t _set_WIFI_mode(uint16_t delay_milliseconds);
 /*
  * @Description 
  * This function makes wroom-02 (WIFI module) work as a client.
- * The wroom-02 will respond "OK" and it is will be write in "WIFI input buffer".
- * If function find "OK" in the "WIFI input buffer", the function return "zero".
+ * The wroom-02 will respond "OK" and it is will be written in "WIFI input buffer".
+ * If the function finds "OK" in the "WIFI input buffer", the function return "zero".
  * If "OK" missing in "WIFI input buffer", the function will start a new attempt to 
  * set working mode. In this moment into UART1 (service port) will 
  * write "WIFI MODULE ERROR". 

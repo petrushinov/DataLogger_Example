@@ -20,7 +20,7 @@ extern char inputBufer [];
 void UART_char_write(char *txData , uint8_t uartPort);
 /*
  * @Description 
- * This function send the string of character to one of the four UART PORTs. 
+ * This function sends the string of characters to one of the four UART PORTs. 
  * NOTE: in this example I chose PIC24FJ256GA106.
  * 
   @Param
