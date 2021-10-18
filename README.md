@@ -30,11 +30,13 @@ If the authorization data is entered through a terminal
 Hardware:
 ---------
 WIFI
+
 For wireless connection to WIFI network, my choice is  esp-wroom-02.
 This WIFI module communicates with external MCU via UART with AT commands. 
 More information about esp-wroom-02 https://www.espressif.com/en/products/modules
 
 MCU
+
 PIC24FJ256GA106
 
 Server:
