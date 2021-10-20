@@ -113,7 +113,7 @@ void WIFI_read_input_buff(void) {
 
 void clear_buff_out(void) {
     uint16_t j;
-    for (j = 0; j <= OUTPUT_UART_BUFF_SIZE; j++) {
+    for (j = 0; j < OUTPUT_UART_BUFF_SIZE; j++) {
         buffOut[j] = 0;
     }
 }
@@ -123,7 +123,7 @@ void WIFI_clear_input_buff(void) {
     for (j = 0; j <= INPUT_WIFI_BUFF_SIZE; j++) {
         inputWIFIBuff[j] = 0;
     }
-    topWIFIQueue=0;
+    topWIFIQueue = 0;
 }
 
 void SERVICE_PORT_clear_input_buff(void) {
@@ -131,7 +131,7 @@ void SERVICE_PORT_clear_input_buff(void) {
     for (j = 0; j <= INPUT_SERVICE_BUFF_SIZE; j++) {
         inputServiceBuff[j] = 0;
     }
-    topServiceQueue=0;
+    topServiceQueue = 0;
 }
 
 // function finding the keyword in the Queue and return a pointer after the end word

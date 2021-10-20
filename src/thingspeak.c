@@ -31,6 +31,7 @@ uint8_t send_data_to_server(void) {
 }
 
 #ifdef SECRETS_IN_CODE
+
 uint8_t _WIFI_connect_to_thingspeak(uint16_t delay_milliseconds) {
 
     clear_buff_out();
@@ -70,7 +71,7 @@ uint8_t _WIFI_send_data_to_thingspeak(uint16_t delay_milliseconds) {
 
     char dataLength [20];
     uint16_t length;
-    
+
     length = sprintf(buffOut, "%s%d\r\n", WRITE_API_KEY, ADC1_get_value(SENSOR1));
 
     sprintf(dataLength, "%s%d\r\n", SEND_DATA_LENGTH, length);
@@ -96,6 +97,7 @@ uint8_t _WIFI_send_data_to_thingspeak(uint16_t delay_milliseconds) {
 #endif
 
 #ifdef SECRETS_IN_FLASH
+
 uint8_t _WIFI_connect_to_thingspeak(uint16_t delay_milliseconds) {
 
     clear_buff_out();
@@ -139,7 +141,7 @@ uint8_t _WIFI_send_data_to_thingspeak(uint16_t delay_milliseconds) {
     uint16_t length;
 
     fill_authorization_temp("APY-KEY&");
-    
+
     length = sprintf(buffOut, "%s%d\r\n", authorizationTemp, ADC1_get_value(SENSOR1));
 
     sprintf(dataLength, "%s%d\r\n", SEND_DATA_LENGTH, length);

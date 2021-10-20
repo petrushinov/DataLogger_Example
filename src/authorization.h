@@ -16,8 +16,10 @@
 #define STARTING_FLASH_ADDRESS 0x2A7F0
 #define END_FLASH_ADDRESS 0x2ABF7
 
+#ifdef SECRETS_IN_FLASH
 extern char authorizationBuff [];
 extern char authorizationTemp [];
+#endif
 
 void FLASH_write_user_authorization (void);
 /*
@@ -96,9 +98,9 @@ char *find_word (char *keyWord, char *string);
 void fill_authorization_temp (char *keyWord);
 /*
  * @Description 
- * The function finds a keyword in "authorizationBuff" and write pointer to the the next 
- * elements in  "authorizationTemp" while 
- * element in "authorizationBuff" is different from "carriage return"
+ * The function finds a keyword in "authorizationBuff" and copies the next  
+ * elements in  "authorizationTemp" while element in "authorizationBuff" is 
+ * different from "carriage return"
  * 
   @Param
  * *keyWord - string to be searched

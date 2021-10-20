@@ -14,14 +14,15 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-#define OUTPUT_UART_BUFF_SIZE 256
-#define INPUT_WIFI_BUFF_SIZE 256
+#define OUTPUT_UART_BUFF_SIZE 255
+#define INPUT_WIFI_BUFF_SIZE 255
 #define INPUT_SERVICE_BUFF_SIZE 200
 
 extern char inputServiceBuff [];
 extern char inputWIFIBuff [];
 extern char buffOut [];
 extern char quote[2]; // ascii = (")
+
 
 void WIFI_input_buff(void);
 /*

@@ -14,10 +14,10 @@
 
 #ifdef SECRETS_IN_CODE
 
-#define SSID ".........."  // ssid WIFI name
-#define WIFI_PASS "..........." //WIFI password
+#define SSID "test"  // ssid WIFI name
+#define WIFI_PASS "test123456" //WIFI password
 #define SERVER_ADDRESS "184.106.153.149" // server IP or link
-#define WRITE_API_KEY "GET /update?api_key=...........&field1=" //Write API Key: Use this key to write data to a channel. 
+#define WRITE_API_KEY "GET /update?api_key=.........&field1=" //Write API Key: Use this key to write data to a channel. 
 #define Read_CH_STATUS "GET channels/........../status.json?api_key=............" //Read Chanel Status Updates
 #define SERVER_PORT "80"
 

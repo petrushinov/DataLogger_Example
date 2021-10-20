@@ -12,6 +12,7 @@
 
 #define nlcr "\r\n"
 // Basic AT Commands************************************************************
+#define WIFI_STATUS "AT+CIPSTATUS" //Gets the connection status
 #define TEST "AT"
 #define RESTART "AT+RST"
 #define TRANSMITER_POWER "AT+RFPOWER"

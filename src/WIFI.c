@@ -82,8 +82,6 @@ uint8_t _connect_to_AP(uint16_t delay_milliseconds) {
 
 uint8_t _connect_to_AP(uint16_t delay_milliseconds) {
 
-      __C30_UART = 2;
-    
     clear_buff_out();
 
     strcat(buffOut, CONNECT_TO_AP);
@@ -98,8 +96,6 @@ uint8_t _connect_to_AP(uint16_t delay_milliseconds) {
     strcat(buffOut, quote);
     strcat(buffOut, nlcr);
 
-    
-    
     uint8_t j = 0;
 
     do {
@@ -116,3 +112,20 @@ uint8_t _connect_to_AP(uint16_t delay_milliseconds) {
     return NO_ERROR;
 }
 #endif
+
+bool is_WIFI_connected(void) {
+
+    WIFI_clear_input_buff();
+
+    __delay_ms(1000);
+
+    UART_char_write(WIFI_STATUS nlcr, WIFI_PORT);
+
+    __delay_ms(1000);
+
+    if (0 != strstr(inputWIFIBuff, "STATUS:2") || 0 != strstr(inputWIFIBuff, "STATUS:4")) {
+        return true;
+    } else {
+        return false;
+    }
+}

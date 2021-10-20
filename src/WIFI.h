@@ -62,4 +62,8 @@ uint8_t start_WIFI_connection(void);
  * This function retransmit returned value from "_set_WIFI_mode()" 
  * and "_connect_to_AP()" functions  
  */
+
+bool is_WIFI_connected(void);
+
+
 #endif	/* WIFI_H */

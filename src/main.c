@@ -1,3 +1,5 @@
+
+
 #define    FCY    10000000UL
 
 #include "mcc_generated_files/system.h"
@@ -23,24 +25,23 @@ int main(void) {
     // initialize the device
     SYSTEM_Initialize();
 
-   
-    
 #ifdef SECRETS_IN_FLASH
     fill_in_authorization();
-    start_WIFI_connection();
-    send_data_to_server();
-#endif
-
-#ifdef SECRETS_IN_CODE
-    start_WIFI_connection();
-    //send_data_to_server();
+    FLASH_write_user_authorization();
+    //FLASH_read_user_authorization ();
 #endif
 
     while (1) {
-        
-        send_data_to_server();
 
-        __delay_ms(10000);
+        if (true == is_WIFI_connected()) {
+            if (NO_ERROR == send_data_to_server()) {
+                // it's the time between every measurement and sending of data 
+                //to the server
+                __delay_ms(5000);
+            }
+        } else {
+            start_WIFI_connection();
+        }
     }
     return 1;
 }
