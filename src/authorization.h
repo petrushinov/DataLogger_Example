@@ -21,7 +21,7 @@ extern char authorizationBuff [];
 extern char authorizationTemp [];
 #endif
 
-void FLASH_write_user_authorization (void);
+void FLASH_write_user_authorization(void);
 /*
  * @Description 
  * This function after call deletes 1031 addresses back from the final address. 
@@ -38,7 +38,7 @@ void FLASH_write_user_authorization (void);
  * N/A
  */
 
-void FLASH_read_user_authorization (void);
+void FLASH_read_user_authorization(void);
 /*
  * @Description 
  * This function after call reads FLASH address which has a 24bit record 
@@ -54,7 +54,7 @@ void FLASH_read_user_authorization (void);
  * N/A
  */
 
-void _fill_authorization_buff (char * add);
+void _fill_authorization_buff(char * add);
 /*
  * @Description 
  *  This function expects enter button will be press, after then function added 
@@ -82,7 +82,7 @@ void fill_in_authorization(void);
  * N/A
  */
 
-char *find_word (char *keyWord, char *string);
+char *find_word(char *keyWord, char *string);
 /*
  * @Description 
  * Function find keyword in string.
@@ -95,7 +95,7 @@ char *find_word (char *keyWord, char *string);
  * return pointer after the key word.
  */
 
-void fill_authorization_temp (char *keyWord);
+void fill_authorization_temp(char *keyWord);
 /*
  * @Description 
  * The function finds a keyword in "authorizationBuff" and copies the next  
@@ -109,7 +109,17 @@ void fill_authorization_temp (char *keyWord);
  * N/A
  */
 
+bool is_the_FLASH_empty(void);
+/*
+ * @Description 
+ * The function checks the first FLSH address. If the address is empty it 
+ * has 0xFFFFFF. If the address has a record it has a different value.
+ * 
+  @Param
+ * N/A
+ * 
+ * @Returns 
+ * true if FLASH is empty or false if FLASH has record
+ */
 #endif
 #endif	
-
-

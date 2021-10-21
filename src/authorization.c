@@ -148,4 +148,13 @@ void fill_authorization_temp(char *keyWord) {
         authorizationTemp [j] = *ptr;
     }
 }
+
+bool is_the_FLASH_empty(void) {
+
+    if (0xFFFFFF == FLASH_ReadWord24(STARTING_FLASH_ADDRESS)) {
+        return true;
+    } else {
+        return false;
+    }
+}
 #endif

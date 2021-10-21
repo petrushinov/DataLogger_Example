@@ -64,6 +64,15 @@ uint8_t start_WIFI_connection(void);
  */
 
 bool is_WIFI_connected(void);
-
-
+/*
+ * @Description 
+ *  The function checks whether the WIFI module is connected to AP or not.  
+ * 
+  @Param
+ * N/A
+ * 
+ * @Returns 
+ * true if WIFI module is connected to AP or false if WIFI module is 
+ * disconnected from AP
+ */
 #endif	/* WIFI_H */

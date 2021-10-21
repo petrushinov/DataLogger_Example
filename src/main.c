@@ -24,23 +24,40 @@ int main(void) {
 
     // initialize the device
     SYSTEM_Initialize();
+    /*
+    #ifdef SECRETS_IN_FLASH
+        fill_in_authorization();
+        FLASH_write_user_authorization();
+        // FLASH_read_user_authorization();
+    #endif
+     */
 
 #ifdef SECRETS_IN_FLASH
-    fill_in_authorization();
-    FLASH_write_user_authorization();
-    //FLASH_read_user_authorization ();
+    if (is_the_FLASH_empty()) {
+
+        fill_in_authorization();
+        FLASH_write_user_authorization();
+        FLASH_read_user_authorization();
+
+    } else {
+        
+        FLASH_read_user_authorization();
+        
+    }
 #endif
 
     while (1) {
 
-        if (true == is_WIFI_connected()) {
+        if (is_WIFI_connected()) {
             if (NO_ERROR == send_data_to_server()) {
                 // it's the time between every measurement and sending of data 
                 //to the server
                 __delay_ms(5000);
             }
         } else {
+            
             start_WIFI_connection();
+            
         }
     }
     return 1;

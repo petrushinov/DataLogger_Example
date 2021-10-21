@@ -10,8 +10,8 @@
 #ifndef PARAM_H
 #define	PARAM_H
 
-#define SECRETS_IN_CODE
-//#define SECRETS_IN_FLASH
+//#define SECRETS_IN_CODE
+#define SECRETS_IN_FLASH
 
 #endif	/* PARAM_H */
 
