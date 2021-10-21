@@ -39,7 +39,7 @@ If the authorization data is entered through a terminal
 	
 6. connecting to the server
 7. measuring value from analog input
-8. sending data to the server goes to step 4
+8. sending data to the server goes to step 5
 
 Hardware:
 ---------
