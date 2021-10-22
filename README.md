@@ -6,7 +6,7 @@ The project:
 This is an example project of a data logger based on the sends data from sensors to a server via a wireless network. 
 My plan is that project will develop in the future with more software modules.
 
-Video presentation
+Video presentation BG
 ------------------
 [![Watch the video](https://img.youtube.com/vi/bKMoh82h2LE/2.jpg)](https://www.youtube.com/watch?v=bKMoh82h2LE)
 
