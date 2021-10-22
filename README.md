@@ -6,7 +6,13 @@ The project:
 This is an example project of a data logger based on the sends data from sensors to a server via a wireless network. 
 My plan is that project will develop in the future with more software modules.
 
-Code functionality at the moment
+Video presentation
+------------------
+[![Watch the video](https://img.youtube.com/vi/bKMoh82h2LE/2.jpg)](https://www.youtube.com/watch?v=bKMoh82h2LE)
+
+
+
+Code algorithm at the moment
 ---------------------------------
 If the authorization data is in the code
 
