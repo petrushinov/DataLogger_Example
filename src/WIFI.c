@@ -26,7 +26,7 @@ uint8_t start_WIFI_connection(void) {
     if (NO_ERROR != error) {
         return error;
     }
-    return error = _connect_to_AP(FOUR_SECONDS);
+    return error = _connect_to_AP(5000);
 }
 
 uint8_t _set_WIFI_mode(uint16_t delay_milliseconds) {
@@ -96,20 +96,19 @@ uint8_t _connect_to_AP(uint16_t delay_milliseconds) {
     strcat(buffOut, quote);
     strcat(buffOut, nlcr);
 
-    uint8_t j = 0;
-
     do {
         UART_char_write(buffOut, WIFI_PORT);
         __delay_ms(delay_milliseconds);
-        j++;
-    } while (false == find_word_WIFI_input_buff("OK") && j < 3);
-
-    if (j == 3) {
-        UART_char_write("WIFI CONNECTION ERROR\r\n", SERVICE_UART_PORT);
+        
+        if (false == find_word_WIFI_input_buff("OK")){
+            UART_char_write("WIFI CONNECTION ERROR\r\n", SERVICE_UART_PORT);
         return WIFI_CONNECTION_ERROR;
-    }
+        }
+    } while (error == WIFI_CONNECTION_ERROR);
+   
     WIFI_clear_input_buff();
     return NO_ERROR;
+    
 }
 #endif
 

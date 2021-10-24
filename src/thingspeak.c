@@ -122,9 +122,9 @@ uint8_t _WIFI_connect_to_thingspeak(uint16_t delay_milliseconds) {
         UART_char_write(buffOut, WIFI_PORT);
         __delay_ms(delay_milliseconds);
         j++;
-    } while (false == find_word_WIFI_input_buff("OK") && j < 4);
+    } while (false == find_word_WIFI_input_buff("OK") && j < 2);
 
-    if (j == 4) {
+    if (j == 2) {
         UART_char_write("THINGSPEAK SERVER FAILURE\r\n", SERVICE_UART_PORT);
         return THINGSPEAK_SERVER_FAILURE;
     }
@@ -156,9 +156,9 @@ uint8_t _WIFI_send_data_to_thingspeak(uint16_t delay_milliseconds) {
         __delay_ms(delay_milliseconds);
 
         j++;
-    } while (false == find_word_WIFI_input_buff("CLOSED") && j < 4);
+    } while (false == find_word_WIFI_input_buff("CLOSED") && j < 2);
 
-    if (j == 4) {
+    if (j == 2) {
         UART_char_write("SERVER DID NOT RECEIVE THE PACKAGE\r\n", SERVICE_UART_PORT);
         return SERVER_DID_NOT_RECEIVE_THE_PACKAGE;
     }

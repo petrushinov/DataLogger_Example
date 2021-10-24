@@ -37,7 +37,7 @@ int main(void) {
 
         fill_in_authorization();
         FLASH_write_user_authorization();
-        FLASH_read_user_authorization();
+        //FLASH_read_user_authorization();
 
     } else {
         
