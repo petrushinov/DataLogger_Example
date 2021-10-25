@@ -8,7 +8,14 @@ My plan is that project will develop in the future with more software modules.
 
 Video presentation BG
 ------------------
+Project presentation
+
 [![Watch the video](https://img.youtube.com/vi/bKMoh82h2LE/2.jpg)](https://www.youtube.com/watch?v=bKMoh82h2LE)
+
+
+Code algorithm demonstration
+
+[![Watch the video](https://img.youtube.com/vi/DDB758XCSvA/1.jpg)](https://youtu.be/DDB758XCSvA)
 
 
 
